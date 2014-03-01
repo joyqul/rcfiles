@@ -60,6 +60,13 @@ imap <C-j> <C-n><C-p>
 imap <F8> <ESC><F8>
 imap <F9> <ESC><F9>
 
+au BufNewFile,BufRead COMMIT_EDITMSG setlocal spell
+au FileType markdown setlocal spell
+au FileType cpp map <F9> <ESC>:w<CR>:!clang++<Space>-Wall<Space>%&&./a.out<CR>
+au FileType cpp imap <F9> <ESC>:w<CR>:!clang++<Space>-Wall<Space>%&&./a.out<CR>
+au FileType python map <F9> <ESC>:w<CR>:!python<Space>%<CR>
+au FileType python imap <F9> <ESC>:w<CR>:!python<Space>%<CR>
+
 syntax on
 highlight Comment ctermfg=darkcyan
 highlight Search term=reverse ctermbg=4 ctermfg=7
@@ -74,6 +81,9 @@ function! MyFoldText()
     let line = v:foldend-v:foldstart               
     return title . "        " . line . " lines  "
 endfunction
+
+autocmd BufWinLeave * mkview "save the view
+autocmd BufWinEnter * silent loadview
 
 set encoding=UTF-8
 
