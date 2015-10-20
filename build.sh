@@ -1,5 +1,5 @@
 cd ~/.vim
-wget http://www.vim.org/scripts/download_script.php?src_id=23483
+wget -O emmet-vim.zip http://www.vim.org/scripts/download_script.php?src_id=23483
 unzip emmet-vim.zip
 mkdir ~/.vim/bundle
 cd ~/.vim/bundle
