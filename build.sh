@@ -7,3 +7,10 @@ cd ~/.vim/bundle
 git clone https://github.com/mattn/emmet-vim.git
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp ~/rcfiles/.vimrc ~/
+mkdir ~/.bash
+cd ~/.bash 
+git clone git://github.com/jimeh/git-aware-prompt.git
+touch ~/.profile
+touch ~/tmp
+sed '1i export GITAWAREPROMPT=~/.bash/git-aware-prompt\nsource "${GITAWAREPROMPT}/main.sh"' ~/.profile > ~/tmp
+mv ~/tmp ~/.profile
