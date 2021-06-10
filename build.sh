@@ -1,3 +1,5 @@
+cd ~/
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 mkdir ~/.vim
 cd ~/.vim
 wget -O emmet-vim.zip http://www.vim.org/scripts/download_script.php?src_id=23483

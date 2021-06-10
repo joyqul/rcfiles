@@ -1,13 +1,16 @@
 [user]
-	email = joy1357924680@gmail.com
+	email = joyqul.tw@gmail.com
 	name = Joyqul Chen
 [core]
 	editor = vim
+	excludesfile = /Users/joyqul/.gitignore_global
 [alias]
     co = checkout
     ci = commit
     st = status
     br = branch
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    hist = log --pretty=format:\"%Cred%h%Creset %C(yellow)%ad%Creset | %s%d [%an]\" --graph --date=short
+    lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
     type = cat-file -t
     dump = cat-file -p
+    cp = cherry-pick
